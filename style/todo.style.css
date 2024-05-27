@@ -10,22 +10,26 @@
   overflow: hidden;
   background-color: #ff9933;
   justify-content: space-between;
+  padding: 0 290px 0 290px;
 }
-
+.nav-box {
+  width: 100%;
+}
 .btn-box {
   display: flex;
   list-style: none;
-  margin: 0 290px 0 290px;
+  align-items: center;
+  justify-content: center;
+}
+.off {
+  display: none;
 }
 .nav-btn {
   display: flex;
   color: white;
-  padding: 14px 10px 14px 10px;
+  padding: 20px;
   text-decoration: none;
-  margin: 0 10px 0 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 120px;
+  width: auto;
 }
 
 .nav-btn:hover:not(.active) {
@@ -39,8 +43,10 @@
   .btn-box {
     margin: 0;
   }
+  .navigation {
+    padding: 0 120px 0 190px;
+  }
 }
-
 h1 {
   position: relative;
   text-align: center;
@@ -48,18 +54,19 @@ h1 {
 }
 .brand {
   padding: none;
-  flex-direction: row;
-  margin: 0 0 0 290px;
-}
-.label {
-  position: absolute;
-  font-size: 30px;
-  padding: 20px;
-  margin-top: 20px;
+  margin: 0 10px 0 10p;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .logo {
-  width: 140px;
-  margin: 10px;
+  width: 50px;
+  height: auto;
+  margin: 0 10px 0 10px;
+}
+.label {
+  font-size: 20px;
+  margin: 0 10px 0 10px;
 }
 .todobody {
   height: 100vh;

@@ -10,24 +10,26 @@
   overflow: hidden;
   background-color: #ff9933;
   justify-content: space-between;
+  padding: 0 290px 0 290px;
 }
 .nav-box {
-  display: flex;
+  width: 100%;
 }
 .btn-box {
   display: flex;
   list-style: none;
-  margin: 0 290px 0 290px;
+  align-items: center;
+  justify-content: center;
+}
+.off {
+  display: none;
 }
 .nav-btn {
   display: flex;
   color: white;
-  padding: 14px 10px 14px 10px;
+  padding: 20px;
   text-decoration: none;
-  margin: 0 10px 0 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 120px;
+  width: auto;
 }
 
 .nav-btn:hover:not(.active) {
@@ -37,7 +39,14 @@
 .active {
   background-color: #e67300;
 }
-
+@media (min-width: 740px) and (max-width: 1024px) {
+  .btn-box {
+    margin: 0;
+  }
+  .navigation {
+    padding: 0 120px 0 190px;
+  }
+}
 h1 {
   position: relative;
   text-align: center;
@@ -45,20 +54,20 @@ h1 {
 }
 .brand {
   padding: none;
-  flex-direction: row;
-  margin: 0 0 0 290px;
-}
-.label {
-  position: absolute;
-  font-size: 30px;
-  padding: 20px;
-  margin-top: 20px;
+  margin: 0 10px 0 10p;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .logo {
-  width: 140px;
-  margin: 10px;
+  width: 50px;
+  height: auto;
+  margin: 0 10px 0 10px;
 }
-
+.label {
+  font-size: 20px;
+  margin: 0 10px 0 10px;
+}
 /* CSS nền hiển thị Modal */
 .nenmodal .nenmodal2 {
   position: absolute;
@@ -95,7 +104,7 @@ h1 {
 @media (min-width: 740px) and (max-width: 1024px) {
   .nenmodal .ndmodal {
     width: 620px;
-    margin: 490px 0 0 0;
+    margin: 310px 0 0 0;
   }
   .btn-box {
     margin: 0;
@@ -105,7 +114,7 @@ h1 {
 @media (min-width: 1024px) and (max-width: 1920px) {
   .nenmodal .ndmodal {
     width: 1200px;
-    margin: 190px 0 0 0;
+    margin: 50px 0 0 0;
   }
 }
 
