@@ -93,16 +93,17 @@ function momodal_4() {
   document.getElementById("nenmodal-4").classList.toggle("active");
 }
 //login form
-const loginForm = document.getElementById("loginForm");
-
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-
-  if (username === "1" && password === "1") {
-    window.location.href = "/mainPage.html";
+  const username = sanitizeInput(document.getElementById("username").value);
+  const password = sanitizeInput(document.getElementById("password").value);
+  if (validateCredentials(username, password)) {
+    location.replace("/mainPage.html");
   } else {
     alert("Invalid username or password");
   }
 });
+function sanitizeInput(input) {}
+function validateCredentials(username, password) {
+  return username === "1" && password === "1";
+}

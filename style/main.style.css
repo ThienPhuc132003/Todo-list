@@ -95,7 +95,7 @@ h1 {
 @media (min-width: 740px) and (max-width: 1024px) {
   .nenmodal .ndmodal {
     width: 620px;
-    margin: 450px 0 0 0;
+    margin: 490px 0 0 0;
   }
   .btn-box {
     margin: 0;
@@ -105,7 +105,7 @@ h1 {
 @media (min-width: 1024px) and (max-width: 1920px) {
   .nenmodal .ndmodal {
     width: 1200px;
-    margin: 130px 0 0 0;
+    margin: 190px 0 0 0;
   }
 }
 
