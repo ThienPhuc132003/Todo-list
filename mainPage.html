@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Web phuc</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='styleMain.css'>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-a
+    wesome/6.5.2/css/all.min.css">
+    <!-- <link rel='stylesheet' href='style2.css'> -->
+    
+</head>
+<body>
+    <div class="brand">
+        <img src="/hinh/logoF1.png" alt="logo" class="logo">
+        <a class="label">Phuc <br />Furniture</a>
+    </div>
+    <div class="nav-box"></div>
+        <ul class="navigation">     
+            <ul class="btn-box">
+            <li><a class="nav-btn active" href="mainPage.html">Home</a></li>
+            <li><a class="nav-btn" href="todo.html" >To-do list</a></li>
+            </ul>
+            <ul class="btn-box">
+            <li><a class="nav-btn" href="login.html">Login</a></li>
+          </ul>   
+    </ul>
+</div>
+    <h1>Furniture list</h1>
+        <div class="btn">
+            <button class="furnitures" onclick="momodal_1()">Chair</button>
+            <button class="furnitures" onclick="momodal_2()">bed</button>
+            <button class="furnitures" onclick="momodal_3()">Benche</button>
+            <button class="furnitures" onclick="momodal_4()">Media Console</button>
+        </div>
+        <div class="nenmodal" id="nenmodal-1">
+            <div class="nenmodal2"></div>
+                <div class="ndmodal">
+                    <div class="titlemodal">Chair list </div>
+                        <table>
+                            <tbody>
+                            <tr>
+                            <td>
+                            <table class="items-box">
+                            <tbody>
+                            <tr>
+                            <td><img class="items" src="hinh/chair1.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair2.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair3.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair4.jpg" alt=""></td>
+                            </tr>
+                            <tr>
+                            <td><img class="items" src="hinh/chair5.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair6.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair7.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair8.jpg" alt=""></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    <div class="closemodal"><button onclick="momodal_1()">×</button></div>
+                </div>
+            </div>
+
+            <div class="nenmodal" id="nenmodal-2">
+                <div class="nenmodal2"></div>
+                    <div class="ndmodal">
+                        <div class="titlemodal">Bed list</div>
+                            <table>
+                                <tbody>
+                                <tr>
+                                <td>
+                                <table class="items-box">
+                                <tbody>
+                                <tr>
+                                <td><img class="items" src="hinh/bed1.jpg" alt=""></td>
+                                <td><img class="items" src="hinh/bed2.jpg" alt=""></td>
+                                <td><img class="items" src="hinh/bed3.jpg" alt=""></td>
+                                <td><img class="items" src="hinh/bed4.jpg" alt=""></td>
+                                </tr>
+                                <tr>
+                                <td><img class="items" src="hinh/bed5.jpg" alt=""></td>
+                                <td><img class="items" src="hinh/bed6.jpg" alt=""></td>
+                                <td><img class="items" src="hinh/bed7.jpg" alt=""></td>
+                                <td><img class="items" src="hinh/bed8.jpg" alt=""></td>
+                                </tr>
+                                </tbody>
+                                </table>
+                                </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        <div class="closemodal"><button onclick="momodal_2()">×</button></div>
+                    </div>
+                </div>
+
+                <div class="nenmodal" id="nenmodal-3">
+                    <div class="nenmodal2"></div>
+                        <div class="ndmodal">
+                            <div class="titlemodal">Benche list</div>
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                    <td>
+                                    <table class="items-box">
+                                    <tbody>
+                                    <tr>
+                                    <td><img class="items" src="hinh/Benche1.jpg" alt=""></td>
+                                    <td><img class="items" src="hinh/Benche2.jpg" alt=""></td>
+                                    <td><img class="items" src="hinh/Benche3.jpg" alt=""></td>
+                                    <td><img class="items" src="hinh/Benche4.jpg" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                    <td><img class="items" src="hinh/Benche5.jpg" alt=""></td>
+                                    <td><img class="items" src="hinh/Benche6.jpg" alt=""></td>
+                                    <td><img class="items" src="hinh/Benche7.jpg" alt=""></td>
+                                    <!-- <td><img class="items" src="hinh/bed8.jpg" alt=""></td> -->
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                    </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            <div class="closemodal"><button onclick="momodal_3()">×</button></div>
+                        </div>
+                    </div>
+
+                    <div class="nenmodal" id="nenmodal-4">
+                        <div class="nenmodal2"></div>
+                            <div class="ndmodal">
+                                <div class="titlemodal">Media Console list</div>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                        <td>
+                                        <table class="items-box">
+                                        <tbody>
+                                        <tr>
+                                        <td><img class="items" src="hinh/mc1.jpg" alt=""></td>
+                                        <td><img class="items" src="hinh/mc2.jpg" alt=""></td>
+                                        <td><img class="items" src="hinh/mc3.jpg" alt=""></td>
+                                        <td><img class="items" src="hinh/mc4.jpg" alt=""></td>
+                                        </tr>
+                                        <tr>
+                                        <td><img class="items" src="hinh/mc5.jpg" alt=""></td>
+                                        <!-- <td><img class="items" src="hinh/bed6.jpg" alt=""></td>
+                                        <td><img class="items" src="hinh/bed7.jpg" alt=""></td>
+                                        <td><img class="items" src="hinh/bed8.jpg" alt=""></td> -->
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                <div class="closemodal"><button onclick="momodal_4()">×</button></div>
+                            </div>
+                        </div>
+<!-- html modal -->
+<script src="main.js"></script>
+</body>
+</html>

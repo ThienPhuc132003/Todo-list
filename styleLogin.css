@@ -1,0 +1,85 @@
+/* @media screen and (max-width: 740px){ */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+.navigation {
+  display: flex;
+  overflow: hidden;
+  background-color: #ff9933;
+  justify-content: space-between;
+}
+.nav-box {
+  display: flex;
+}
+.btn-box {
+  display: flex;
+  list-style: none;
+  margin: 0 290px 0 290px;
+}
+.nav-btn {
+  display: flex;
+  color: white;
+  padding: 14px 10px 14px 10px;
+  text-decoration: none;
+  margin: 0 10px 0 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 120px;
+}
+
+.nav-btn:hover:not(.active) {
+  background-color: #bd6712;
+}
+
+.active {
+  background-color: #e67300;
+}
+@media (min-width: 740px) and (max-width: 1024px) {
+  .btn-box {
+    margin: 0;
+  }
+}
+h1 {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+.brand {
+  padding: none;
+  flex-direction: row;
+  margin: 0 0 0 290px;
+}
+.label {
+  position: absolute;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.logo {
+  width: 140px;
+  margin: 10px;
+}
+.loginFormBox {
+  display: flex;
+  justify-content: center;
+}
+.loginForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 10px;
+}
+.userImageBox {
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+.userImage {
+  width: 150px;
+  border: 3px solid black;
+  border-radius: 100%;
+}
+/* } */

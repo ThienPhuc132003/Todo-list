@@ -1,0 +1,191 @@
+/* @media screen and (max-width: 740px){ */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+.navigation {
+  display: flex;
+  overflow: hidden;
+  background-color: #ff9933;
+  justify-content: space-between;
+}
+.nav-box {
+  display: flex;
+}
+.btn-box {
+  display: flex;
+  list-style: none;
+  margin: 0 290px 0 290px;
+}
+.nav-btn {
+  display: flex;
+  color: white;
+  padding: 14px 10px 14px 10px;
+  text-decoration: none;
+  margin: 0 10px 0 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 120px;
+}
+
+.nav-btn:hover:not(.active) {
+  background-color: #bd6712;
+}
+
+.active {
+  background-color: #e67300;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+.brand {
+  padding: none;
+  flex-direction: row;
+  margin: 0 0 0 290px;
+}
+.label {
+  position: absolute;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.logo {
+  width: 140px;
+  margin: 10px;
+}
+
+/* CSS nền hiển thị Modal */
+.nenmodal .nenmodal2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: none;
+}
+/* CSS bảng nội dung Modal */
+.nenmodal .ndmodal {
+  position: static;
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, 100%) scale(0);
+  background: #fff;
+  width: 1200px;
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+  display: block;
+  flex-wrap: wrap;
+  position: absolute;
+  box-shadow: 0px 0px 2px #111;
+}
+/* @media(max-width:740){
+    .nenmodal .ndmodal {width: 50px;margin-top: 120px;
+    }
+    } */
+@media (min-width: 740px) and (max-width: 1024px) {
+  .nenmodal .ndmodal {
+    width: 620px;
+    margin: 450px 0 0 0;
+  }
+  .btn-box {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1920px) {
+  .nenmodal .ndmodal {
+    width: 1200px;
+    margin: 130px 0 0 0;
+  }
+}
+
+/* CSS bao bọc của nút tắt Modal */
+.nenmodal .closemodal {
+  text-align: right;
+  margin-right: -40px;
+  margin-bottom: -35px;
+}
+/* CSS tieu de của Modal */
+.titlemodal {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/* CSS nút tắt modal */
+.closemodal button {
+  width: 50px;
+  height: 40px;
+  font-size: 30px;
+  padding: 0px;
+  border-radius: 20%;
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.closemodal button:hover {
+  background-color: #cc0000;
+}
+.nenmodal.active .nenmodal2 {
+  display: block;
+}
+/* CSS hiệu ứng hiển thị Modal */
+.nenmodal.active .ndmodal {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+.furnitures {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  outline: none;
+  padding: 10px 20px 10px 20px;
+  margin: 0 20px 0 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  white-space: nowrap;
+  border: none;
+  touch-action: manipulation;
+}
+.furnitures:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+.items-box tr {
+  display: flex;
+  flex-wrap: wrap;
+}
+.items {
+  display: inline-flex;
+  width: 280px;
+  height: 280px;
+  border: 2px solid black;
+  margin: 5px;
+}
+
+/* } */

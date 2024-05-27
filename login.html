@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Web phuc</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='styleLogin.css'>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-a
+    wesome/6.5.2/css/all.min.css">
+    <!-- <link rel='stylesheet' href='style2.css'> -->
+    
+</head>
+<body>
+    <div class="brand">
+        <img src="/hinh/logoF1.png" alt="logo" class="logo">
+        <a class="label">Phuc <br />Furniture</a>
+    </div>
+    <div class="nav-box"></div>
+        <ul class="navigation">     
+            <ul class="btn-box">
+            <li><a class="nav-btn" href="mainPage.html">Home</a></li>
+            <li><a class="nav-btn" href="todo.html" >To-do list</a></li>
+            </ul>
+            <ul class="btn-box">
+            <li><a class="nav-btn active" href="login.html">Login</a></li>
+          </ul>   
+    </ul>
+</div>
+
+    <div class="loginFormBox">
+    <div id="loginForm" class="loginForm">
+        <h1>Login form</h1>
+        <div class="userImageBox">
+            <div ><img src="hinh/userIcon.jpg" alt="" class="userImage"></div>
+        </div>
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+    <script>
+        const form = document.getElementById('loginForm');
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+          if (username === '1' && password === '1') {
+            // Login successful, redirect to mainpage.html
+            window.location.href = 'mainPage.html';
+          } else {
+            alert('Invalid username or password');
+          }
+        });
+      </script>
+</body>
+</html>
