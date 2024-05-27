@@ -42,19 +42,6 @@
         <input type="submit" value="Submit">
       </div>
     </div>
-    <script>
-        const form = document.getElementById('loginForm');
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const username = document.getElementById('username').value;
-          const password = document.getElementById('password').value;
-          if (username === '1' && password === '1') {
-            // Login successful, redirect to mainpage.html
-            window.location.href = 'mainPage.html';
-          } else {
-            alert('Invalid username or password');
-          }
-        });
-      </script>
+    <script src="main.js"></script>
 </body>
 </html>

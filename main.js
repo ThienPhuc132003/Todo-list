@@ -101,7 +101,7 @@ loginForm.addEventListener("submit", (e) => {
   const password = document.getElementById("password").value;
 
   if (username === "1" && password === "1") {
-    window.location.href = "mainPage.html";
+    window.location.href = "/mainPage.html";
   } else {
     alert("Invalid username or password");
   }
