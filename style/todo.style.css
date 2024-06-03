@@ -1,31 +1,36 @@
-/* @media only screen and (min-width:1024px) and (max-width:1920px){ */
 * {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
+.off {
+  display: none;
+}
 .navigation {
   display: flex;
   overflow: hidden;
   background-color: #ff9933;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 290px;
 }
-
+.nav-box {
+  display: flex;
+}
 .btn-box {
   display: flex;
   list-style: none;
-  margin: 0 290px 0 290px;
+  justify-content: center;
+  align-items: center;
 }
 .nav-btn {
   display: flex;
   color: white;
-  padding: 14px 10px 14px 10px;
+  padding: 14px 0;
   text-decoration: none;
-  margin: 0 10px 0 10px;
-  flex-wrap: wrap;
   justify-content: center;
-  width: 120px;
+  width: 100px;
 }
 
 .nav-btn:hover:not(.active) {
@@ -35,11 +40,6 @@
 .active {
   background-color: #e67300;
 }
-@media (min-width: 740px) and (max-width: 1024px) {
-  .btn-box {
-    margin: 0;
-  }
-}
 
 h1 {
   position: relative;
@@ -47,19 +47,35 @@ h1 {
   padding-top: 20px;
 }
 .brand {
-  padding: none;
-  flex-direction: row;
-  margin: 0 0 0 290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
 }
 .label {
-  position: absolute;
-  font-size: 30px;
-  padding: 20px;
-  margin-top: 20px;
+  position: static;
+  font-size: 15px;
+  padding: 0 10px;
 }
 .logo {
-  width: 140px;
-  margin: 10px;
+  width: 60px;
+  padding: 0 10px;
+}
+@media (max-width: 740px) {
+  .navigation {
+    padding: 0;
+    justify-content: center;
+  }
+  .label {
+    display: none;
+  }
+}
+@media (min-width: 740px) and (max-width: 1024px) {
+  .navigation {
+    padding: 0 120px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1920px) {
 }
 .todobody {
   height: 100vh;
@@ -198,12 +214,16 @@ h1 {
 }
 .completed {
   text-decoration: line-through;
-  color: #a0a;
+  color: rgba(0, 0, 0, 0.39);
+  font-style: italic;
 }
 #error {
   text-align: center;
   background-color: white;
   color: #ff8080;
   margin-top: 24px;
+}
+.save {
+  background: #0ec9c9;
 }
 /* } */

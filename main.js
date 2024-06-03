@@ -3,12 +3,16 @@ const newTaskInput = document.querySelector("#wrapper input");
 const taskContainer = document.querySelector("#tasks");
 const error = document.getElementById("error");
 const countValue = document.querySelector(".count-value");
+const addTplace = document.querySelector("#task-place");
+const editTplace=document.querySelector(".taskname")
 let taskCount = 0;
-//Task count
+
+// Task count
 const displayCount = (taskCount) => {
   countValue.innerText = taskCount;
 };
-//Add task
+
+// Add task
 const addTask = () => {
   const taskName = newTaskInput.value.trim();
   error.style.display = "none";
@@ -19,47 +23,79 @@ const addTask = () => {
     return;
   }
 
-  const task = `<div class="task">
-<input type="checkbox" class="task-check">
-<span class="taskname">${taskName}</span>
-<button class="edit">
-<i class="fa-solid fa-pen-to-square"></i>
-</button>
-<button class="delete">
-<i class="fa-solid fa-square-minus"></i>
-</button>
-</div>`;
+  const task = `
+  <div class="task">
+    <input type="checkbox" class="task-check">
+    <span class="taskname">${taskName}</span>
+    <input type="text" class="edit-input" style="display:none;">
+    <button class="edit">
+      <i class="fa-solid fa-pen-to-square"></i>
+    </button>
+    <button class="save" style="display:none;">
+      <i class="fa-solid fa-save"></i>
+    </button>
+    <button class="delete">
+      <i class="fa-solid fa-square-minus"></i>
+    </button>
+  </div>`;
 
   taskContainer.insertAdjacentHTML("beforeend", task);
   taskCount++;
   displayCount(taskCount);
-  //Delete task
+
+  // Delete
   const deleteButtons = document.querySelectorAll(".delete");
   deleteButtons.forEach((button) => {
     button.onclick = () => {
-      button.parentNode.remove();
-      taskCount -= 1;
+      const taskDiv = button.closest(".task");
+      const checkbox = taskDiv.querySelector(".task-check");
+
+      if (!checkbox.checked) {
+        taskCount -= 1;
+      }
+      taskDiv.remove();
       displayCount(taskCount);
     };
   });
-  //Edit task
+
+  // Edit button
   const editButtons = document.querySelectorAll(".edit");
   editButtons.forEach((editBtn) => {
     editBtn.onclick = (e) => {
-      let targetElement = e.target;
-      if (!(e.target.className == "edit")) {
-        targetElement = e.target.parentNode;
-      }
-      newTaskInput.value = targetElement.previousElementSibling?.innerText;
-      targetElement.parentNode.remove();
-      taskCount -= 1;
-      displayCount(taskCount);
+      let taskDiv = e.target.closest(".task");
+      let taskNameSpan = taskDiv.querySelector(".taskname");
+      let editInput = taskDiv.querySelector(".edit-input");
+      let saveButton = taskDiv.querySelector(".save");
+
+      taskNameSpan.style.display = "none";
+      editInput.value = taskNameSpan.innerText;
+      editInput.style.display = "inline-block";
+      saveButton.style.display = "inline-block";
+      editBtn.style.display = "none";
+    };
+  })
+  // Save button when edit
+  const saveButtons = document.querySelectorAll(".save");
+  saveButtons.forEach((saveBtn) => {
+    saveBtn.onclick = (e) => {
+      let taskDiv = e.target.closest(".task");
+      let taskNameSpan = taskDiv.querySelector(".taskname");
+      let editInput = taskDiv.querySelector(".edit-input");
+      let editButton = taskDiv.querySelector(".edit");
+
+      taskNameSpan.innerText = editInput.value;
+      taskNameSpan.style.display = "inline-block";
+      editInput.style.display = "none";
+      saveBtn.style.display = "none";
+      editButton.style.display = "inline-block";
     };
   });
+
+  // Task check
   const tasksCheck = document.querySelectorAll(".task-check");
   tasksCheck.forEach((checkBox) => {
-    checkbox.onchange = () => {
-      checkbox.nextElementSibling.classList.toggle("completed");
+    checkBox.onchange = () => {
+      checkBox.nextElementSibling.classList.toggle("completed");
       if (checkBox.checked) {
         taskCount -= 1;
       } else {
@@ -68,12 +104,17 @@ const addTask = () => {
       displayCount(taskCount);
     };
   });
-  taskCount += 1;
-  displayCount(taskContainer);
+
   newTaskInput.value = "";
 };
+
 addBtn.addEventListener("click", addTask);
-addBtn.addEventListener("press");
+addTplace.addEventListener("keydown", function (event) {
+  if (event.keyCode === 13) {
+    addTask();
+  }
+});
+
 window.onload = () => {
   taskCount = 0;
   displayCount(taskCount);
@@ -92,17 +133,22 @@ function momodal_3() {
 function momodal_4() {
   document.getElementById("nenmodal-4").classList.toggle("active");
 }
-//login form
-const loginForm = document.getElementById("loginForm");
 
-loginForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+//login form
+function login() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
+  const error = document.getElementById("error");
 
-  if (username === "1" && password === "1") {
+  // Hardcoded credentials for demonstration purposes
+  const validUsername = "1";
+  const validPassword = "1";
+
+  if (username === validUsername && password === validPassword) {
+    localStorage.setItem("isAuth", "true");
     window.location.href = "mainPage.html";
   } else {
-    alert("Invalid username or password");
+    localStorage.setItem("isAuth", "false");
+    error.style.display = "block";
   }
-});
+}

@@ -1,15 +1,19 @@
-/* @media screen and (max-width: 740px){ */
 * {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
+.off {
+  display: none;
+}
 .navigation {
   display: flex;
   overflow: hidden;
   background-color: #ff9933;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 290px;
 }
 .nav-box {
   display: flex;
@@ -17,17 +21,16 @@
 .btn-box {
   display: flex;
   list-style: none;
-  margin: 0 290px 0 290px;
+  justify-content: center;
+  align-items: center;
 }
 .nav-btn {
   display: flex;
   color: white;
-  padding: 14px 10px 14px 10px;
+  padding: 14px 0;
   text-decoration: none;
-  margin: 0 10px 0 10px;
-  flex-wrap: wrap;
   justify-content: center;
-  width: 120px;
+  width: 100px;
 }
 
 .nav-btn:hover:not(.active) {
@@ -44,19 +47,35 @@ h1 {
   padding-top: 20px;
 }
 .brand {
-  padding: none;
-  flex-direction: row;
-  margin: 0 0 0 290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
 }
 .label {
-  position: absolute;
-  font-size: 30px;
-  padding: 20px;
-  margin-top: 20px;
+  position: static;
+  font-size: 15px;
+  padding: 0 10px;
 }
 .logo {
-  width: 140px;
-  margin: 10px;
+  width: 60px;
+  padding: 0 10px;
+}
+@media (max-width: 740px) {
+  .navigation {
+    padding: 0;
+    justify-content: center;
+  }
+  .label {
+    display: none;
+  }
+}
+@media (min-width: 740px) and (max-width: 1024px) {
+  .navigation {
+    padding: 0 120px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1920px) {
 }
 
 /* CSS nền hiển thị Modal */
@@ -68,10 +87,11 @@ h1 {
   height: 100vh;
   z-index: 2;
   display: none;
+  backdrop-filter: blur(5px);
 }
 /* CSS bảng nội dung Modal */
 .nenmodal .ndmodal {
-  position: static;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(100%, 100%) scale(0);
@@ -79,7 +99,9 @@ h1 {
   width: 1200px;
   z-index: 2;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
+  margin: 20px 0 0 0;
+  bottom: 10ppx;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   border-radius: 10px;
@@ -88,25 +110,45 @@ h1 {
   position: absolute;
   box-shadow: 0px 0px 2px #111;
 }
-/* @media(max-width:740){
-    .nenmodal .ndmodal {width: 50px;margin-top: 120px;
-    }
-    } */
+.items {
+  display: flex;
+  width: 280px;
+  height: 280px;
+  border: 2px solid black;
+  margin: 5px;
+}
+@media (max-width: 740px) {
+  .items {
+    width: 250px;
+    height: 250px;
+  }
+  #nenmodal-3 .ndmodal {
+    margin: 750px 0 0 0;
+  }
+  #nenmodal-4 .ndmodal {
+    margin: 500px 0 0 0;
+  }
+  .nenmodal .ndmodal {
+    width: 280px;
+    margin: 880px 0 0 0;
+  }
+  .btn {
+    flex-wrap: wrap;
+  }
+}
 @media (min-width: 740px) and (max-width: 1024px) {
+  #nenmodal-4 .ndmodal {
+    margin: 130px 0 0 0;
+  }
   .nenmodal .ndmodal {
     width: 620px;
-    margin: 450px 0 0 0;
+    margin: 280px 0 0 0;
   }
   .btn-box {
     margin: 0;
   }
 }
-
 @media (min-width: 1024px) and (max-width: 1920px) {
-  .nenmodal .ndmodal {
-    width: 1200px;
-    margin: 130px 0 0 0;
-  }
 }
 
 /* CSS bao bọc của nút tắt Modal */
@@ -147,7 +189,7 @@ h1 {
 .btn {
   display: flex;
   justify-content: center;
-  margin: 10px 0 10px 0;
+  margin: 5px 0;
 }
 .furnitures {
   align-items: center;
@@ -164,8 +206,8 @@ h1 {
   justify-content: center;
   line-height: 1;
   outline: none;
-  padding: 10px 20px 10px 20px;
-  margin: 0 20px 0 20px;
+  padding: 10px 20px;
+  margin: 5px;
   text-align: center;
   text-decoration: none;
   transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
@@ -179,13 +221,6 @@ h1 {
 .items-box tr {
   display: flex;
   flex-wrap: wrap;
-}
-.items {
-  display: inline-flex;
-  width: 280px;
-  height: 280px;
-  border: 2px solid black;
-  margin: 5px;
 }
 
 /* } */
