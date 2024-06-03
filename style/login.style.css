@@ -108,7 +108,6 @@ input[type="password"] {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: calc(100% - 22px);
   margin-bottom: 10px;
 }
 
@@ -119,7 +118,6 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: calc(100% - 22px);
 }
 
 input[type="submit"]:hover {
