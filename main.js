@@ -153,10 +153,7 @@ function login() {
 function checkIsAuth(){
   const isAuth=localStorage.getItem("isAuth")==="true";
   if(!isAuth){
-    window.localStorage.href="login.html";
-  }
-  if (isAuth){
-
+    window.location.href="login.html";
   }
 }
 window.onload=checkIsAuth;
