@@ -146,9 +146,27 @@ function login() {
 
   if (username === validUsername && password === validPassword) {
     localStorage.setItem("isAuth", "true");
-    window.location.href = "mainPage.html";
+    window.location.href = "todo.html";
   } else {
-    localStorage.setItem("isAuth", "false");
     error.style.display = "block";
   }
 }
+function checkIsAuth(){
+  const isAuth=localStorage.getItem("isAuth")==="true";
+  if(!isAuth){
+    window.localStorage.href="login.html";
+  }
+}
+window.onload=checkIsAuth;
+  
+function logout() {
+  localStorage.setItem("isAuth", "false");
+  window.location.href = "login.html";
+}
+
+// Attach logout event handler
+const logoutBtn = document.getElementById("logout-btn");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", logout);
+}
+
