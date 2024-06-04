@@ -139,8 +139,6 @@ function login() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
   const error = document.getElementById("error");
-
-  // Hardcoded credentials for demonstration purposes
   const validUsername = "1";
   const validPassword = "1";
 
@@ -151,20 +149,22 @@ function login() {
     error.style.display = "block";
   }
 }
+//checking auth
 function checkIsAuth(){
   const isAuth=localStorage.getItem("isAuth")==="true";
   if(!isAuth){
     window.localStorage.href="login.html";
   }
+  if (isAuth){
+
+  }
 }
 window.onload=checkIsAuth;
-  
+//logout
 function logout() {
   localStorage.setItem("isAuth", "false");
   window.location.href = "login.html";
 }
-
-// Attach logout event handler
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", logout);
